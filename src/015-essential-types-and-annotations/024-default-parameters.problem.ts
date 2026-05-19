@@ -2,11 +2,7 @@ import { Expect, Equal } from "@total-typescript/helpers";
 
 import { expect, it } from "vitest";
 
-const concatName = (first: string, last?: string) => {
-  if (!last) {
-    return first;
-  }
-
+const concatName = (first: string, last: string = "Pocock") => {
   return `${first} ${last}`;
 };
 
@@ -25,3 +21,4 @@ it("should return the first name", () => {
 
   expect(result).toEqual("John Pocock");
 });
+console.log(concatName("John"));

@@ -1,6 +1,7 @@
 type Recipe = {
   title: string;
   instructions: string;
+  ingredients: Array<object>;
 };
 
 const processRecipe = (recipe: Recipe) => {
