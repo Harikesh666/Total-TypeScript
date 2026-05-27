@@ -1,13 +1,13 @@
-type UserPart {
+type UserPart = {
   id: string;
   name: string;
   age: number;
-}
+};
 
-type UserPart2 {
+type UserPart2 = {
   id: number;
   phone: string;
-}
+};
 
 interface User extends UserPart, UserPart2 {}
 
