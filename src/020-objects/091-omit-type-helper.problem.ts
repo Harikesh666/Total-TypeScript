@@ -5,7 +5,10 @@ interface Product {
   description: string;
 }
 
-const addProduct = (productInfo: Product) => {
+type ProductWithoutId = Omit<Product, "id">;
+// interface ProductWithoutId extends Omit<Product, "id"> {}
+
+const addProduct = (productInfo: ProductWithoutId) => {
   // Do something with the productInfo
 };
 
