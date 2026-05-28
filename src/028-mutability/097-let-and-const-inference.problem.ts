@@ -1,12 +1,14 @@
 // CODE
 
-let type = "button";
-
-// TESTS
+type ButtonType = "button" | "submit" | "reset";
 
 type ButtonAttributes = {
-  type: "button" | "submit" | "reset";
+  type: ButtonType;
 };
+
+let type: ButtonType = "button";
+
+// TESTS
 
 const buttonAttributes: ButtonAttributes = {
   type,

@@ -23,7 +23,11 @@ type Product = {
 
 type Entity = User | Organisation | Product;
 
-type EntityWithoutId = Omit<Entity, "id">;
+type DistributiveOmit<T, K extends keyof T> = T extends any
+  ? Omit<T, K>
+  : never;
+
+type EntityWithoutId = DistributiveOmit<Entity, "id">;
 //   ^?
 
 type test = Expect<
